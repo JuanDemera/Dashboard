@@ -21,7 +21,29 @@ let plot = (data) => {
   const chart = new Chart(ctx, config);
   
 };
-
+let plotUV = (data) => {
+  const ctx = document.getElementById("UVChart");
+ 
+  
+  const dataset = {
+    labels: data.daily.time,
+    datasets: [
+      {
+        label: "Indice UV" /* ETIQUETA DEL GRÁFICO */,
+        data: data.daily.uv_index_max /* ARREGLO DE DATOS */,
+        fill: false,
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.1,
+      },
+    ],
+  };
+  const config = {
+    type: "line",
+    data: dataset,
+  };
+  const chart = new Chart(ctx, config);
+  
+};
 let load = (data) => {
     let timezone = data["timezone"];
         let timezoneHTML = document.getElementById("timezone");
@@ -35,6 +57,7 @@ let load = (data) => {
         let elevationHTML = document.getElementById("elevation");
         elevationHTML.textContent = elevation;
         plot(data);
+        plotUV(data);
 };
 
 let loadInocar = () => {

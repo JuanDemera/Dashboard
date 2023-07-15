@@ -27,14 +27,14 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+          <a href="#myChart" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Weather</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
-            <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic </span>
+          <a href="#UVChart" class="list-group-item list-group-item-action py-2 ripple active">
+            <i class="fas fa-chart-area fa-fw me-3"></i><span>UV INDEX</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-              class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
+          <a href="#table-container" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-lock fa-fw me-3"></i><span>TIDE</span></a>
         </div>
       </div>
     </nav>
@@ -136,7 +136,7 @@
       <section class="mb-4">
         <div class="card">
           <div class="card-header py-3">
-            <h5 class="mb-0 text-center"><strong>Weather</strong></h5>
+            <h3 class="mb-0 text-center"><strong>Weather</strong></h3>
           </div>
           <div class="card-body">
             <canvas class="my-4 w-100" id="myChart"></canvas>
@@ -151,21 +151,23 @@
       <section class="mb-4">
         <div class="card">
           <div class="card-header py-3">
-            <h5 class="mb-0 text-center"><strong>myUVindex</strong></h5>
+            <h3 class="mb-0 text-center"><strong>UV Index</strong></h3>
           </div>
           <div class="card-body">
-            <canvas class="my-4 w-100" id="myUVindex"></canvas>
+            <canvas class="my-4 w-100" id="UVChart"></canvas>
           </div>
         </div>
       </section>
+
       <section class="mb-4">
         <div class="card">
+          <div class="card-header py-3">
+          <h3 class="mb-0 text-center"><strong>Tie Table</strong></h3>
+          </div>
           <div id="table-container">
-            
           </div>
         </div>
       </section>
-      <!--Section: Sales Performance KPIs-->
     </div>
   </main>
   <!--Main layout-->
